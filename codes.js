@@ -44,7 +44,6 @@ function CreatMovieCard(obj){
         <div class="movieImage" style="background-image: url(${obj['scr']})"> </div>
             <p class="title">${obj['title']}</p>
             <p class="imdb left"><span>${obj['imdb']} </span>/10</p>
-
             <p class="update">last Update </p>
             <p class="update-info left">release Time</p>
             <p class="date">${obj['date']}</p>
@@ -61,12 +60,9 @@ let movieContainer=document.getElementById('movieContainer')
 movieContainer.innerHTML=movieHtmls(movieList)
 
 function onSearch(element){
-    let searchTerm=element.value;
-    let movieFilter=movieList.filter(movie=>{
-        return (movie.title.includes(searchTerm))
-
+    let searchTerm = element.value.toLowerCase();
+    let movieFilter = movieList.filter(movie=>{
+        return (movie.title.toLowerCase().includes(searchTerm))
     })
     movieContainer.innerHTML=movieHtmls(movieFilter)
 }
-
-

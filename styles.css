@@ -13,12 +13,6 @@ body{
     background-color: black;
     width: 100vw;
     height: 3.5rem;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: center;*/
-    /*align-content: center;*/
-    /*align-items: center;*/
-    /*overflow-x: hidden;*/
 }
 .searchBar input{
     width: 85vw;
@@ -72,6 +66,7 @@ body{
 }
 
 .movieImage {
+    grid-area: img;
     height: 400px;
     width: 20vw;
     background-repeat: no-repeat;
